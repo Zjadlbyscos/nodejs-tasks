@@ -2,7 +2,7 @@ import path from "path";
 import gravatar from "gravatar";
 import { promises as fsPromises } from "fs";
 import Jimp from "jimp";
-import User from "../models/user.model";
+import User from "../user/user.model.js";
 
 const tmpDir = path.join(process.cwd(), "/avatars/public/tmp");
 const avatarsDir = path.join(process.cwd(), "/avatars/public/avatars");
