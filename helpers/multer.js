@@ -1,15 +1,16 @@
-import { promises as fs } from "fs";
+import { promises as fsPromises } from "fs";
 
-const folderAlreadyExist = (path) => {
-  return fs
-    .access(path)
-    .then(() => true)
-    .catch(() => false);
+const folderAlreadyExist = async (path) => {
+  try {
+    await fsPromises.access(path);
+    return true;
+  } catch (error) {
+    return false;
+  }
 };
-
 const createFolderIfNotExist = async (folderName) => {
   if (!(await folderAlreadyExist(folderName))) {
-    await fs.mkdir(folderName);
+    await fsPromises.mkdir(currentPath);
   }
 };
 
