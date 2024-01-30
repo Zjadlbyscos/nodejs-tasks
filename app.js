@@ -23,6 +23,7 @@ const connection = mongoose.connect(process.env.DB_URL, {
 });
 
 app.use(express.json());
+app.use(express.static('public'))
 app.use(passport.initialize());
 app.use("/api", contactRoutes);
 app.use("/api/auth", authRoutes);
