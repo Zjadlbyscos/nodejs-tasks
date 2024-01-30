@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 const __dirname = path.resolve();
 const publicDir = path.join(__dirname, "public");
@@ -23,7 +23,7 @@ const connection = mongoose.connect(process.env.DB_URL, {
 });
 
 app.use(express.json());
-app.use(express.static('public'))
+app.use(express.static("public"));
 app.use(passport.initialize());
 app.use("/api", contactRoutes);
 app.use("/api/auth", authRoutes);
