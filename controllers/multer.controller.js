@@ -4,8 +4,8 @@ import { promises as fsPromises } from "fs";
 import Jimp from "jimp";
 import User from "../user/user.model.js";
 
-const tmpDir = path.join(process.cwd(), "/avatars/public/tmp");
-const avatarsDir = path.join(process.cwd(), "/avatars/public/avatars");
+const tmpDir = path.join(process.cwd(), "/public/tmp");
+const avatarsDir = path.join(process.cwd(), "/public/avatars");
 
 console.log(tmpDir);
 console.log(avatarsDir);
