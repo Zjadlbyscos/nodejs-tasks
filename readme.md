@@ -25,9 +25,9 @@ Make sure you have the following installed on your machine:
     npm run start:dev
 
 ## Features
-**User authentication and authorization**
-**Email verification using SendGrid**
-**CRUD operations for managing contacts**
+* User authentication and authorization
+* Email verification using SendGrid
+* CRUD operations for managing contacts
 
 ## Project Structure
 * config/passport.js: Passport configuration for authentication
