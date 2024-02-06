@@ -1,7 +1,7 @@
 import User from "../user/user.model.js";
 import sendEmail from "../helpers/mailer.js";
 
-const verifyEmail = async (req, res, _) => {
+const verifyEmail = async (req, res ) => {
   const { verificationToken } = req.params;
   const user = await User.findOne({ verificationToken });
   if (!user) {
@@ -21,7 +21,7 @@ const verifyEmail = async (req, res, _) => {
   });
 };
 
-const resendVerification = async (req, res, _) => {
+const resendVerification = async (req, res) => {
   const { email } = req.body;
   if (!email) {
     return res.json({
